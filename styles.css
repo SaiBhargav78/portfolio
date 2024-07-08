@@ -44,9 +44,9 @@ html,body,.fullbody{
 }
 
 .navposition{
+    width: 100%;
     position: fixed;
     top: 0;
-    width: 100%;
     padding-top: 0;
     background-color: rgb(29, 27, 27) !important;
     z-index: 1;
@@ -56,6 +56,7 @@ html,body,.fullbody{
 }
 
 .contain{
+    width: 100%;
     padding: 0px 100px;
 }
 
@@ -82,15 +83,18 @@ a.brand{
     color: white;
 }
 
-.header{
+.welcome{
     width: 100%;
     /* display: flex;
     flex-direction: column;
     align-items: center; */
     position: absolute;
     left:0%;
-    bottom:40%;
+    bottom:20%;
     z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 h1,p{
@@ -114,9 +118,6 @@ p.quote{
 }
 
 .profilepic{
-    position: absolute;
-    left: 65%;
-    bottom: 25%;
     opacity: 0;
     visibility: hidden;
     animation: FadeIn 2s forwards 0.5s;
@@ -135,10 +136,10 @@ p.quote{
 
 
 /* About Me */
-
 .About{
-    padding: 50px 400px 100px;
+    padding-top: 40px;
 }
+
 
 .sec2head{
     margin-top: 10px;
@@ -155,6 +156,7 @@ p.quote{
 }
 
 .aboutme .aboutmetext{
+    padding: 50px 400px 100px;
     color: white;
 }
 
@@ -219,6 +221,10 @@ p.quote{
     display: flex;
 }
 
+.RTTtrack{
+    display: flex;
+}
+
 .diettrackertext{
     flex-basis: 70%;
     padding-left: 100px;
@@ -232,6 +238,14 @@ p.quote{
 
 .diettrackertext a:hover{
     color: blue;
+}
+
+.trackvideocontain{
+    padding-left: 100px;
+}
+
+.videocontain{
+    padding-left: 100px;
 }
 
 .diettrackervideo{
@@ -255,6 +269,24 @@ p.quote{
     color: blue;
 }
 
+.VAC{
+    flex-basis: 70%;
+    padding-left: 100px;
+}
+
+.VAC a{
+    text-decoration: none;
+    font-size: 35px;
+    color: white;
+}
+
+.VAC a:hover{
+    color: blue;
+}
+
+.certificate{
+    padding-left: 100px;
+}
 /* skills */
 
 .myskills{
@@ -342,7 +374,7 @@ h3{
     flex-basis: 50%;
     display: flex;
     flex-direction: column;
-    padding-left: 300px;
+    padding-left: 170px;
 }
 
 .info img{
@@ -351,4 +383,140 @@ h3{
 }
 .info label{
     color: white;
+}
+
+@media (max-width:1186px){
+    .VAC{
+        flex-basis: 50%;
+        padding: 0;
+    }
+    .videocontain{
+        padding: 0;
+        flex-basis: 50%;
+        text-align: center;
+        padding-top: 20px;
+    }
+    .certificate{
+        padding: 0;
+        flex-basis: 50%;
+        text-align: center;
+        padding-top: 20px;
+    }
+    .infoitem{
+        padding-left: 100px;
+    }
+}
+
+@media(max-width:1104px){
+    .aboutme .aboutmetext{
+        padding: 50px 200px 100px;
+    }
+}
+
+@media(max-width:997px){
+    .sec1background{
+        height: 800px;
+    }
+    .welcome{
+        flex-direction: column;
+        bottom: 0;
+        align-items: center;
+    }
+    .welcome .header{
+        text-align: center;
+    }
+}
+
+@media(max-width:800px){
+    .sec1background{
+        height: 1000px;
+    }
+    .contain{
+        padding: 0;
+        margin: 0;
+    }
+    .welcome{
+        bottom: 10%;
+    }
+    .hobbiescontainer{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hobby .gaming{
+        padding-bottom: 80px;
+    }
+
+    .infoitem{
+        padding: 0;
+        justify-content: center;
+    }
+}
+
+@media(max-width:720px){
+    .myworks{
+        padding-bottom: 40px;
+    }
+    .diettracker{
+        flex-direction: column;
+        align-items: center;
+    }
+    .RTTtrack{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .trackvideocontain,.RTTtext,.diettrackertext{
+        padding: 0;
+    }
+    .trackvideocontain video,.videocontain video,.certificate img{
+        width: 400px;
+        height: 300px;
+    }
+}
+
+@media(max-width:606px){
+    .education{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .aboutme .aboutmetext{
+        padding: 50px 0px 100px;
+    }
+    .inforcontainer{
+        flex-direction: column;
+    }
+    .inforitem{
+        align-items: center;
+    }
+}
+
+@media(max-width:500px){
+    .sec1background{
+        height: 700px;
+    }
+    .welcome .header h1{
+        font-size: 60px;
+    }
+    .welcome .profilepic img{
+        width: 350px;
+    }
+
+    .videocontain video,.diettrackervideo video,.certificate img{
+        object-fit: cover;
+    }
+    .skillcontainer{
+        grid-template-rows: repeat(5,1fr);
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .art2d img,.model3d video,.gaming img,.sports img{
+        max-width: 100%;
+        object-fit: cover;
+    }
+}
+
+@media(max-width:360px){
+    .sec1background{
+        height: 800px;
+    }
 }

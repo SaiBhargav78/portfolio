@@ -83,14 +83,6 @@ a.righticon{
     color: white !important;
 }
 
-a.righticon:hover{
-    color: blue !important;
-}
-
-a.righticon:focus{
-    color: blue !important;
-}
-
 
 .welcome{
     width: 100%;
@@ -106,6 +98,7 @@ a.righticon:focus{
     align-items: center;
 }
 
+
 h1,p{
     margin: 0;
     color: white;
@@ -120,6 +113,7 @@ h1.name{
 }
 p.quote{
     font-size: 40px;
+    padding-left: 25px;
     opacity: 0;
     visibility: hidden;
     animation: FadeIn 2s forwards 0.5s;
@@ -394,7 +388,14 @@ h3{
     color: white;
 }
 
+@media screen and (max-width:1528px) {
+    p.quote{
+        padding-left: 0;
+    }
+}
+
 @media screen and  (max-width:1186px){
+    
     .VAC{
         flex-basis: 50%;
         padding: 0;

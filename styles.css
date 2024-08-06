@@ -386,6 +386,7 @@ h3{
 }
 .info label{
     color: white;
+    hover: cursor;
 }
 
 @media screen and (max-width:1528px) {
